@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Qr Code </title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -76,6 +76,28 @@
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
     <a href="home.php" class="text-white text-lg" style="margin-left: 10px;"><i class="fas fa-arrow-left text-black"></i> </a>
+<br>
+<br>
+<br>    
+    <div style="text-align: center;">
+        <img src="img/qr.png">
+        <h1 style="color: white; font-size: 25px;">Scan <b>QR</b> for <b>Attendance</b></h1>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex justify-center" style="margin-top: 20px;">
+        <button class="bg-yellow-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <i class="fas fa-qrcode" style="color: black; font-size: 24px; "><span style="margin-left: 15px;">Scan Now</span></i>
+        </button>
+    </div>
+    <br>
+    <br>
+    <br>
 
    
 
