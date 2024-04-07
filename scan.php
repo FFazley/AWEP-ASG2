@@ -59,7 +59,7 @@
     <img src="img/scan.png" style="width: 200px; height: 200px;">
     </div>
     <div id="success-modal" style="border-radius: 10%; background-color: #fcd34d; width: 300px; text-align: center;">
-        <h1 style="font-size: 1.2em;"><b>Scan Successful!</b></h1>
+        <h1 style="font-size: 1.2em;"><b>Thank you for joining!</b></h1>
         <br><p style="font-size: 1.2em;">Your Attendance has been successfully recorded</p>
         <br>
         <button class="bg-gray-300 hover:bg-blue-400 text-black font-bold py-2 px-4 rounded-full" onclick="window.location.href='home.php'">Go to Home</button>
