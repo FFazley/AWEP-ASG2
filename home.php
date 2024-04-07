@@ -133,7 +133,7 @@
 
     </div>
 
-    <nav class="bg-yellow-300 text-white px-4 py-2 flex justify-center" style="border-top-left-radius: 30%; border-top-right-radius: 20%; border: 1px solid black;">
+    <nav class="bg-yellow-300 text-white px-4 py-2 flex justify-center" style="border-top-left-radius: 40%; border-top-right-radius: 40%; border: 1px solid black;position: fixed; bottom: -10px; left: -10px; right: -10px;">
         <ul class="flex space-x-10 items-center"> <!-- Increased space-x value to 8 -->
             <li class="nav-item"><a href="#"><i class="fas fa-home" style="color: black; font-size: 24px;"></i></a></li>
             <li class="nav-item"><a href="#"><i class="fas fa-clipboard-list" style="color: black; font-size: 24px;"></i></a></li>
