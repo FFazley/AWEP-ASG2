@@ -73,11 +73,17 @@
     <br>
 
     <div class="flex-container">
-        <div style="display: flex; align-items: center;">
+    <div style="position: absolute; top: 15px; left: 10px;">
+   
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFiZpdaReqrOX5ZTox5ZwsWVttl0rVBCreNQ&s" style="width: 100px; height: 100px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
-            <h1 style="color: white; font-size: 20px; margin-left: 15px;">Hello, Hasbullah!</h1>
+    </div>
+    <div style="color: white; font-size: 20px; position: absolute; top: 45px; left: 150px;">
+            <h1 style="color: white; font-size: 40px">Hello, Hasbullah!</h1>
+    </div>
         </div>
     </div>
+    <br>
+    <br>
     <br>
     <br>
 

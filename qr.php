@@ -59,8 +59,12 @@
 <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
-    <a href="home.php" class="text-white text-lg" sstyle="margin-right: 10px; position: fixed;"><i class="fas fa-arrow-left text-black"></i> </a>
-<br>
+    <div style="position: absolute; top: 10px; left: 10px;">
+    <a href="home.php" class="text-white text-lg" ><i class="fas fa-arrow-left text-black"></i> </a>
+    <br>
+    
+     
+    </div>
 <br>
 <br>    
     <div style="text-align: center; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
