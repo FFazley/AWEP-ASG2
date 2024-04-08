@@ -36,12 +36,7 @@
             }
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            /* Mobile Styles */
-            body {
-                background-color: #08415C;
-            }
+       
 
             .flex-container {
                 flex-direction: column;
@@ -69,10 +64,11 @@
             .nav-item {
                 margin: 5px;
             }
-        }
+        
     </style>
 </head>
-<body>
+<body class="flex flex-col" style="background-color: #08415C;">
+    <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
 
@@ -131,7 +127,7 @@
 
     <br>
 
-    </div><br><br><br>
+    <br><br><br>
     <nav class="bg-yellow-300 text-white px-4 py-2 flex justify-center" style="border-top-left-radius: 40%; border-top-right-radius: 40%; border: 1px solid black;position: fixed; bottom: -10px; left: -10px; right: -10px;">
         <ul class="flex space-x-10 items-center"> <!-- Increased space-x value to 8 -->
             <li class="nav-item"><a href="#"><i class="fas fa-home" style="color: black; font-size: 24px;"></i></a></li>
@@ -152,6 +148,8 @@
             });
         });
     </script>
+    </div>
+    
 </body>
 
 </html>
