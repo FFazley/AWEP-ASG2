@@ -39,7 +39,7 @@
 <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
-    <a href="home.php" class="text-white text-lg" style="margin-left: -100px;"><i class="fas fa-arrow-left text-white"></i> </a>
+    <a href="home.php" class="text-white text-lg" style="margin-right: 10px; position: fixed;"><i class="fas fa-arrow-left text-white"></i> </a>
     <div id="qr-code">
     <img src="img/scan.png" style="width: 200px; height: 200px;">
     </div>
