@@ -6,7 +6,8 @@
     <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body style="background-color: #08415C;">
+<body class="flex flex-col" style="background-color: #08415C;">
+<div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
 <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
 
 <div class="mt-60">
@@ -18,6 +19,6 @@
         </button>
     </div>
 </div>
-  
+</div>  
 </body>
 </html>

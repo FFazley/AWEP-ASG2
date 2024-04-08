@@ -33,25 +33,10 @@
             display: none;
         }
 
-        @keyframes popOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            /* Mobile Styles */
-        }
-    </style>
+          </style>
 </head>
-<body>
+<body class="flex flex-col" style="background-color: #08415C;">
+<div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
     <a href="home.php" class="text-white text-lg" style="margin-left: 10px;"><i class="fas fa-arrow-left text-white"></i> </a>
@@ -72,5 +57,6 @@
             document.getElementById('qr-code').style.opacity = '0.5'; // Reduce opacity of the image
         }, 2000); // 2000 milliseconds = 2 seconds
     </script>
+</div>
 </body>
 </html>

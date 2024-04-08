@@ -56,46 +56,30 @@
     </style>
 </head>
 <body class="flex flex-col" style="background-color: #08415C;">
-<div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
+    <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
     <a href="home.php" class="text-white text-lg" style="margin-left: 10px;"><i class="fas fa-arrow-left text-black"></i> </a>
 <br>
+
+<h3 class="text-2xl font-bold mb-4 text-white text-center">Club</h3>
 <br>
-<br>    
-    <div style="text-align: center;">
-        <img src="img/qr.png">
-        <h1 style="color: white; font-size: 25px;">Scan <b>QR</b> for <b>Attendance</b></h1>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="flex justify-center" style="margin-top: 20px;">
-        <button class="bg-yellow-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            <a href="scan.php" style="text-decoration: none; color: black;">
-                <i class="fas fa-qrcode" style="color: black; font-size: 24px; "><span style="margin-left: 15px;">Scan Now</span></i>
-            </a>
-        </button>
-    </div>
-    <br>
-    <br>
-    <br>
-
-   
-
+    <div class="flex justify-center">
+        <div class="relative">
+            <input type="text" class="border border-gray-300 rounded-md py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:border-transparent w-80" placeholder="Search">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-search text-gray-400"></i>
+            </div>
+        </div>
+    
     <nav class="bg-yellow-300 text-white px-4 py-2 flex justify-center" style="border-top-left-radius: 40%; border-top-right-radius: 40%; border: 1px solid black;position: fixed; bottom: -10px; left: -10px; right: -10px;">
         <ul class="flex space-x-10 items-center"> <!-- Increased space-x value to 8 -->
             <li class="nav-item"><a href="home.php"><i class="fas fa-home" style="color: black; font-size: 24px;"></i></a></li>
-            <li class="nav-item"><a href="club.php"><i class="fas fa-clipboard-list" style="color: black; font-size: 24px;"></i></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-qrcode" style="color: black; font-size: 24px;"></i></a></li>
+            <li class="nav-item"><a href="#"><i class="fas fa-clipboard-list" style="color: black; font-size: 24px;"></i></a></li>
+            <li class="nav-item"><a href="qr.php"><i class="fas fa-qrcode" style="color: black; font-size: 24px;"></i></a></li>
             <li class="nav-item"><a href="#"><i class="fas fa-user" style="color: black; font-size: 24px;"></i></a></li>
         </ul>
     </nav>
-</div>
-   
-</body>
+    </div>
+        </body>
 </html>

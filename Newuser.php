@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>New User</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background-color: #08415C;">
+<body class="flex flex-col" style="background-color: #08415C;">
+<div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
 <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
   <div class="container mx-auto p-8 w-80 bg-white rounded-2xl shadow-md mt-60">
     <h1 class="text-center text-2xl font-bold mb-4 text-blue-700">Registration</h1>
@@ -82,5 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
     <p class="text-center text-gray-500 text-sm mt-8">Copyright © DWDTO8 2024 - Privacy & Term</p>
   </div>
+</div>
 </body>
 </html>

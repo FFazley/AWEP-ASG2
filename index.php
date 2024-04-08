@@ -6,7 +6,8 @@
   <title>Login Page</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="flex flex-col" style="background-color: #08415C;">
+<div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
   <div class="container mx-auto p-8 max-w-md bg-white rounded shadow-md">
     <h1 class="text-center text-2xl font-bold mb-4">Holla</h1>
     <p class="text-center text-gray-500 mb-8">Welcome back mate!</p>
@@ -26,5 +27,6 @@
     </form>
     <p class="text-center text-gray-500 text-sm mt-8">Copyright © DWDTOR 2024 - Privacy & Term</p>
   </div>
+</div>
 </body>
 </html>
