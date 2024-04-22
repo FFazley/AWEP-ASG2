@@ -77,20 +77,22 @@
     <br>
         <div class="flex justify-center">
             <a href="badminton.php">
-            <img src="img/badminton1.png" alt="Badminton" class="w-25 h-45" style="border-radius: 50px;">
+            <img src="img/badminton1.png" alt="Badminton" class="w-25 h-45" style="border-radius: 20px;">
             </a>
         </div>
     <br>
     <br>
         <div class="flex justify-center">
         <a href="rugby.php">
-            <img src="img/rugby.png" alt="Rugby" class="w-25 h-45" style="border-radius: 50px;">
+            <img src="img/rugby1.png" alt="Rugby" class="w-25 h-45" style="border-radius: 50px;">
         </a>
         </div>
     <br>
     <br>
         <div class="flex justify-center">
-            <img src="img/judo.png" alt="judo" class="w-30 h-30" style="border-radius: 50px;">
+        <a href="judo.php">
+            <img src="img/judo.png" alt="judo" class="w-30 h-30" style="border-radius: 20px;">
+        </a>
         </div>
         <br>
         <br>

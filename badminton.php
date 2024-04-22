@@ -72,8 +72,8 @@
     <br>
 <div class="bg-yellow-300 rounded border-2 border-black" style="border-radius: 10px;">
     <div>
-        <h2 class="font-bold text-xl">Description    <button class="bg-gray-600 rounded border-2 border-black text-white font-bold py-2 px-4 rounded float-right" style="border-radius: 20px;" >Join Now!</button>
-   </h2>
+        <h2 class="font-bold text-xl">Description    <button class="bg-gray-600 rounded border-2 border-black text-white font-bold py-2 px-4 rounded float-right hover:bg-red-600" style="border-radius: 20px;" onclick="this.style.backgroundColor = 'green'">Join Now!</button>
+        </h2>
         </div>
       <br>
     <br>
@@ -90,7 +90,7 @@
     All the best.
     </h3>
     <div class="flex justify-center">
-        <img src="img/badminton2.png" alt="Badminton2" class="w-25 h-45" style="border-radius: 50px; border: 2px solid black;">
+        <img src="img/badminton2.png" alt="Badminton2" class="w-25 h-45" >
     </div>
 </div>
 </div>

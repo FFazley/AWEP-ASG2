@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rugby </title>
+    <title>Judo </title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -63,38 +63,32 @@
     <a href="club.php" class="text-white text-lg" ><i class="fas fa-arrow-left text-black"></i> </a>
     <br>
     </div>
-<h3 class="text-2xl font-bold mb-4 text-white text-center">Rugby</h3>
+<h3 class="text-2xl font-bold mb-4 text-white text-center">Judo</h3>
 
  
         <div class="flex justify-center">
-            <img src="img/rugby1.png" alt="rugby" class="w-25 h-45" style="border-radius: 50px;">
+            <img src="img/judo.png" alt="Badminton" class="w-25 h-45" style="border-radius: 50px;">
         </div>
     <br>
 <div class="bg-yellow-300 rounded border-2 border-black" style="border-radius: 10px;">
     <div>
-        <h2 class="font-bold text-xl">Description    <button class="bg-blue-600 rounded border-2 border-black text-white font-bold py-2 px-4 rounded float-right hover:bg-red-600" style="border-radius: 20px;" >Joined</button>
-       </h2>
+        <h2 class="font-bold text-xl">Description    <button class="bg-gray-600 rounded border-2 border-black text-white font-bold py-2 px-4 rounded float-right hover:bg-red-600" style="border-radius: 20px;" onclick="this.style.backgroundColor = 'green'">Join Now!</button>
+        </h2>
         </div>
       <br>
     <br>
     
 <div class="text-center">
     <h3 style="font-size: 20px;">
-    🏉Don't miss out on the kickoff event of the semester! Lace up your cleats, gather your friends, and be part of the 3K Touch Rugby Event. Let's make this day unforgettable!🏉
-<br>
-<br>
-🗓️Date: 12th November 2023
-🕚Time: 10am until 2pm
-📍Location: Field A, UBD Sports Complex
+    Unlock Your Potential with Politeknik Judo Club 🥋 <br><br>
+
+Introducing our dynamic Judo club poster that captures the essence of our community. From throws to camaraderie, discipline to determination, it's all here. Join us on the journey to become a stronger, more skilled version of yourself.
 <br><br>
-Registration Details:
-💸 Fee: $5 per participant
- Open to current Politeknik students and alumni!
-Scan through the QR Code or click the link in our bio 🤟🏻
-📣Spread the Word! Use #3KTouchRugby23
+Ready to make the leap?<br>
+Do DM us for any questions, let's embark on this exciting adventure together!
     </h3>
     <div class="flex justify-center">
-        <img src="img/rugby2.png" alt="rubgy2" class="w-25 h-45 " >
+        <img src="img/judo2.png" alt="judo2" class="w-25 h-45" >
     </div>
 </div>
 </div>
