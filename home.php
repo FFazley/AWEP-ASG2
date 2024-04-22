@@ -139,7 +139,7 @@
             <li class="nav-item"><a href="#"><i class="fas fa-home" style="color: black; font-size: 24px;"></i></a></li>
             <li class="nav-item"><a href="club.php"><i class="fas fa-clipboard-list" style="color: black; font-size: 24px;"></i></a></li>
             <li class="nav-item"><a href="qr.php"><i class="fas fa-qrcode" style="color: black; font-size: 24px;"></i></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-user" style="color: black; font-size: 24px;"></i></a></li>
+            <li class="nav-item"><a href="UserProfile.php"><i class="fas fa-user" style="color: black; font-size: 24px;"></i></a></li>
         </ul>
     </nav>
 

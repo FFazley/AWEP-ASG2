@@ -72,7 +72,7 @@
     <br>
 <div class="bg-yellow-300 rounded border-2 border-black" style="border-radius: 10px;">
     <div>
-        <h2 class="font-bold text-xl">Description    <button class="bg-gray-600 rounded border-2 border-black text-white font-bold py-2 px-4 rounded float-right hover:bg-red-600" style="border-radius: 20px;" onclick="this.style.backgroundColor = 'green'">Join Now!</button>
+    <h2 class="font-bold text-xl">Description    <button class="bg-gray-600 rounded border-2 border-black text-white font-bold py-2 px-4 rounded float-right hover:bg-red-600" style="border-radius: 20px;" onclick="window.location.href = 'ApplicationForm.php'">Join Now!</button>
         </h2>
         </div>
       <br>
