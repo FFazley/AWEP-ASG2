@@ -76,18 +76,24 @@
     <br>
     <br>
         <div class="flex justify-center">
-            <img src="img/badminton.png" alt="Badminton" class="w-25 h-45" style="border-radius: 50px;">
+            <a href="badminton.php">
+            <img src="img/badminton1.png" alt="Badminton" class="w-25 h-45" style="border-radius: 50px;">
+            </a>
         </div>
     <br>
     <br>
         <div class="flex justify-center">
+        <a href="rugby.php">
             <img src="img/rugby.png" alt="Rugby" class="w-25 h-45" style="border-radius: 50px;">
+        </a>
         </div>
     <br>
     <br>
         <div class="flex justify-center">
-            <img src="img/judo.png" alt="judo" class="w-25 h-45" style="border-radius: 50px;">
+            <img src="img/judo.png" alt="judo" class="w-30 h-30" style="border-radius: 50px;">
         </div>
+        <br>
+        <br>
        
     <nav class="bg-yellow-300 text-white px-4 py-2 flex justify-center" style="border-top-left-radius: 40%; border-top-right-radius: 40%; border: 1px solid black;position: fixed; bottom: -10px; left: -10px; right: -10px;">
         <ul class="flex space-x-10 items-center"> <!-- Increased space-x value to 8 -->
