@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':email', $username);
     $stmt->execute();
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $users = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user && password_verify($password, $user['password'])) {
+    if ($users && password_verify($password, $users['password'])) {
       $_SESSION['loggedin'] = true;
       $_SESSION['username'] = $username;
 

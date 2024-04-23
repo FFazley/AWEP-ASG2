@@ -137,7 +137,8 @@
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-info-circle text-xl mr-2"></i>
-        <h2 class="text-xl font-bold">About us</h2>
+        <h2 class="text-xl font-bold"><a href="aboutus.php">About us</a></h2>
+    </div>
     </div>
         </div>
         <div class="mt-6">
