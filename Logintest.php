@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $error = 'Password must be a maximum of 8 characters';
   } else {
 
-    $query = "SELECT email password FROM users WHERE email = :email";
+    $query = "SELECT email,password FROM users WHERE email = :email";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':email', $name);
     $stmt->execute();
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div class="container mx-auto p-8 w-80 bg-white rounded-2xl shadow-md">
 
-      <form action="#" method="POST">
+      <form method="POST">
         <div class="mb-4">
           <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
           <input type="text" id="username" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
@@ -58,8 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <input type="password" id="password" name="password" maxlength="8" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Password">
         </div>
         <div class="flex items-center justify-between mb-4 text-center">
-        <a href="home.php">  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</button>
-        </a>  </div>
+        <a href="home.php">
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</button>
+        </a>
         New User?<a href="Newuser.php" class="text-sm text-gray-600 hover:text-gray-700">Join Us</a>
       </form>
       <?php if (isset($error)) { ?>
