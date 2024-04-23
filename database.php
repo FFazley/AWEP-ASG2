@@ -20,9 +20,9 @@ try {
 
     //Fetch as associative Array
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    echo 'Database connected...';
+  
 } catch (PDOException $e) {
-    echo 'Connection failed' . $e->getMessage();
+
 }
 
 ?>

@@ -1,3 +1,8 @@
+<?php
+require 'database.php';
+$users = $pdo->query("SELECT * FROM users")->fetchAll();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +83,11 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFiZpdaReqrOX5ZTox5ZwsWVttl0rVBCreNQ&s" style="width: 100px; height: 100px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
     </div>
     <div style="color: white; font-size: 20px; position: absolute; top: 45px; left: 150px;">
-            <h1 style="color: white; font-size: 30px">Hello, <?php echo $username; ?>!</h1>
+            <h1 style="color: white; font-size: 30px">Hello <?php echo $users; ?>!</h1>    </div>
+        </div>
+    </div>
+    <br>
+    <br>
     <br>
     <br>
 

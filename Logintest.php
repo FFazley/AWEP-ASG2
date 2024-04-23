@@ -3,22 +3,22 @@ require 'database.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $username = $_POST['username'];
+  $name = $_POST['username'];
   $password = $_POST['password'];
 
   if (strlen($password) > 8) {
     $error = 'Password must be a maximum of 8 characters';
   } else {
-    // Fixed SQL query to select from the 'users' table
-    $query = "SELECT email, password FROM users WHERE email = :email";
+
+    $query = "SELECT email password FROM users WHERE email = :email";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':email', $username);
+    $stmt->bindParam(':email', $name);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['password'])) {
       $_SESSION['loggedin'] = true;
-      $_SESSION['username'] = $username;
+      $_SESSION['username'] = $name;
 
       header('Location: home.php');
       exit;
