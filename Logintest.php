@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password']) && isset(
   $email = $_POST['username'];
   $password = $_POST['password']; // Get the password from the form
 
-  $query = "SELECT email, password FROM users WHERE email = :email"; // Select the password as well
+  $query = "SELECT name , email, password FROM users WHERE email = :email"; // Select the password as well
   $stmt = $pdo->prepare($query);
   $stmt->bindParam(':email', $email);
   $stmt->execute();
@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password']) && isset(
   if ($user && $password == $user['password']) { // Check the password
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $email;
+    $_SESSION['name'] = $user['name'];
 
     header('Location: home.php');
     exit;
