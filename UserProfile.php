@@ -1,6 +1,7 @@
 <?php
-
+session_start();
 require 'database.php';
+
 
 ?>
 
@@ -111,10 +112,10 @@ require 'database.php';
     </div>
     <br>
     <div class="flex justify-center">
-        <h3 class="text-white text-lg">Muhammad Hasbullah Bin Bakar</h3>
+        <h3 class="text-white text-lg"><?php echo ($_SESSION['Fullname']); ?></h3>
     </div>
     <div class="flex justify-center">
-        <h4 class="text-white text-sm">22FTT1494@student.pb.edu.bn</h4>
+        <h4 class="text-white text-sm"><?php echo ($_SESSION['email']); ?></h4>
     </div>
         <br>
         <div class="mt-6">
@@ -125,7 +126,7 @@ require 'database.php';
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-id-card-alt text-xl mr-2"></i>
-        <h2 class="text-xl font-bold">22FTT1494</h2>
+        <h2 class="text-xl font-bold"><?php echo ($_SESSION['StudentID']); ?></h2>
     </div>
         </div>
         <div class="mt-6">
