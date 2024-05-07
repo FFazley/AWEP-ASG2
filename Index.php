@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password']) && isset(
   $email = $_POST['username'];
   $password = $_POST['password']; // Get the password from the form
 
-  $query = "SELECT name , email, password, Fullname, StudentID FROM users WHERE email = :email"; // Select the password, Fullname, and StudentID as well
+  $query = "SELECT name , email, password, Fullname, StudentID, course, EP FROM users WHERE email = :email"; // Select the password, Fullname, and StudentID as well
   $stmt = $pdo->prepare($query);
   $stmt->bindParam(':email', $email);
   $stmt->execute();
@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password']) && isset(
     $_SESSION['email'] = $user['email'];
     $_SESSION['Fullname'] = $user['Fullname'];
     $_SESSION['StudentID'] = $user['StudentID'];
+    $_SESSION['course'] = $user['course'];
+    $_SESSION['EP'] = $user['EP'];
     
 
     header('Location: home.php');

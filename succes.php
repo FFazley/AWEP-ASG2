@@ -19,7 +19,7 @@ require 'database.php';
     <h1 class="text-center text-2xl mb-4 text-white">Your Sign up was successful</h1>
     
     <div class="flex justify-center">
-                <a href="Logintest.php" class="text-yellow-500">Back to Login</a>
+                <a href="Index.php" class="text-yellow-500">Back to Login</a>
             
         </div>
     </div>

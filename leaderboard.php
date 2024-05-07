@@ -1,3 +1,10 @@
+<?php
+session_start();
+require 'database.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,10 +104,10 @@
 <div style="display: flex; align-items: center;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
-    <span style="margin-left: 10px;"><b>Quincy</b></span>
-    <span style="margin-left: 195px;">123</span>
+    <span style="margin-left: 10px;"><b><?php echo ucfirst($_SESSION['name']); ?></b></span>
+    <span style="margin-left: 195px;"><?php echo ($_SESSION['EP']); ?></span>
     <br>
-    <span style="margin-left: 10px;">22FTT0001</span>
+    <span style="margin-left: 10px;"><?php echo ucfirst($_SESSION['StudentID']); ?></span>
     <span style="margin-left: 180px;"><i class="fas fa-caret-up text-green-500"></i></span>
 </div>
 </div>

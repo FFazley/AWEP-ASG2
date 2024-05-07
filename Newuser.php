@@ -5,6 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password'];
+  $fullname = $_POST['fullname'];
+  $course = $_POST['course'];
+  $studentid = $_POST['studentid'];
+  
   if (empty($name)) {
     $errors[] = "Name is required";
   }
@@ -16,9 +20,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   } elseif (strlen($password) < 8) {
     $errors[] = "Password must be at least 8 characters long";
   }
+  if (empty($fullname)) {
+    $errors[] = "Full Name is required";
+  }
+  if (empty($course)) {
+    $errors[] = "Course is required";
+  }
+  if (empty($studentid)) {
+    $errors[] = "Student ID is required";
+  }
+  
   if (empty($errors)) {
-    $stmt = $pdo->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
-    $stmt->execute([$name, $email, $password]);
+    $stmt = $pdo->prepare("INSERT INTO users (name, email, password, fullname, course, studentid) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->execute([$name, $email, $password, $fullname, $course, $studentid]);
     header("Location: succes.php");
     exit;
   }
@@ -64,6 +78,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          </label>
           <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Password">
         </div>
+        <div class="mb-4">
+    <label for="fullname" class="block text-gray-700 text-sm font-bold mb-2">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Full Name">
+  </div>
+
+  <div class="mb-4">
+    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Phone Number">
+  </div>
+
+  <div class="mb-4">
+    <label for="course" class="block text-gray-700 text-sm font-bold mb-2">Course:</label>
+    <input type="text" id="course" name="course" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Course">
+  </div>
+
+  <div class="mb-4">
+    <label for="studentid" class="block text-gray-700 text-sm font-bold mb-2">Student ID:</label>
+    <input type="text" id="studentid" name="studentid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Student ID">
+  </div>
         <div class="flex items-center justify-between mb-4">
           <form action="succes.php" method="POST">
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign In</button>
@@ -71,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <br>
         </div>
         <div class="text-sm">
-          Already Have Account?<a href="Logintest.php" class="text-gray-600 hover:text-gray-700"> Login</a>
+          Already Have Account?<a href="Index.php" class="text-gray-600 hover:text-gray-700"> Login</a>
         </div>
       </form>
       <p class="text-center text-gray-500 text-sm mt-8">Copyright © DWDTO8 2024 - Privacy & Term</p>
