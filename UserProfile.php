@@ -150,7 +150,37 @@ require 'database.php';
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-sign-out-alt text-xl mr-2"></i>
-        <h2 class="text-xl font-bold">Log Out</h2>
+        <button class="text-xl font-bold" onclick="showModal()">Log Out</button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal" >
+            <!-- Modal content -->
+            <div class="modal-content"  style="border-radius: 10%; background-color: #fcd34d; width: 300px; text-align: center;">
+     
+                <span class="close" onclick="hideModal()">&times;</span>
+                <h2 style="color: black; font-size: 1em;">Confirmation</h2>
+                <p style="color: black; font-size: 1em;">Are you sure you want to log out?</p>
+                <button onclick="logout()" style="color: black; font-size: 1em;">Yes</button>
+                <button onclick="hideModal()" style="color: black; font-size: 1em;">No</button>
+            </div>
+        </div>
+
+        <script>
+            function showModal() {
+                const modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
+
+            function hideModal() {
+                const modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+
+            function logout() {
+                // Perform logout logic here
+                // Redirect to logout page or clear session data
+            }
+        </script>
     </div>
         </div>
     </div>
