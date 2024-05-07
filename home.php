@@ -95,7 +95,7 @@ require 'database.php';
 
     <div class="bg-yellow-300 rounded-lg shadow-md p-8" style="border: 2px solid;">
         <div class="flex items-center">
-            <p>Hello <b><?php echo ucfirst($_SESSION['name']); ?></b>! Your <b>Total EP POINTS</b> for this month is 135pt!</p>
+            <p>Hello <b><?php echo ucfirst($_SESSION['name']); ?></b>! Your <b>Total EP POINTS</b> for this month is <b> <?php echo ($_SESSION['ep']); ?></b>!</p>
             <div>
                 <img src="img/student.png" style="margin-left: 10px; width: 150px; height: 100px;">
             </div>
