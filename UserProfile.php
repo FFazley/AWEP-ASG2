@@ -120,7 +120,7 @@ require 'database.php';
         <br>
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black" style="border-radius: 10px; text-align: center; width: 350px;">
-        <h2 class="text-xl font-bold">Total Point : 135 points</h2>
+        <h2 class="text-xl font-bold">Total Point : <?php echo ($_SESSION['ep']); ?></h2>
     </div>
         </div>
         <div class="mt-6">
@@ -132,13 +132,13 @@ require 'database.php';
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-code text-xl mr-2"></i>
-        <h2 class="text-xl font-bold">Web Development</h2>
+        <h2 class="text-xl font-bold"><?php echo ($_SESSION['course']); ?></h2>
     </div>
         </div>
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-phone-alt text-xl mr-2"></i>
-        <h2 class="text-xl font-bold">+673 777 7777</h2>
+        <h2 class="text-xl font-bold"><?php echo ($_SESSION['phone']); ?></h2>
     </div>
         </div>
         <div class="mt-6">

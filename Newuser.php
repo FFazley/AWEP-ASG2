@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $fullname = $_POST['fullname'];
   $course = $_POST['course'];
   $studentid = $_POST['studentid'];
+  $phone= $_POST['phone'];
   
   if (empty($name)) {
     $errors[] = "Name is required";
@@ -29,10 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (empty($studentid)) {
     $errors[] = "Student ID is required";
   }
-  
+  if (empty($phone)) {
+    $errors[] = "Phone Number is required";
+  }
   if (empty($errors)) {
-    $stmt = $pdo->prepare("INSERT INTO users (name, email, password, fullname, course, studentid) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->execute([$name, $email, $password, $fullname, $course, $studentid]);
+    $stmt = $pdo->prepare("INSERT INTO users (name, email, password, fullname, course, studentid,phone) VALUES (?, ?, ?, ?, ?, ?,?)");
+    $stmt->execute([$name, $email, $password, $fullname, $course, $studentid, $phone]);
     header("Location: succes.php");
     exit;
   }

@@ -40,23 +40,10 @@ require 'database.php';
 </div>
 
 <br><br>
-<div class="overflow-x-auto"><table class="table-auto mx-auto " style="background-color: #CCCCCC; border-top: 15px;">        
-            <tr>
-            <td class="px-8 py-2" style="height: 100px;">Data 2</td>
-</tr>
+
 
           
    
-</table>
-<table class="table-auto mx-auto rounded-lg" style="background-color: #CCCCCC; border-radius: 15px;">
-  
-      
-        <tr>
-            <td class="px-11 py-2">Data 1</td>
-            
-            <td class="px-11 py-2">Data 3</td>
-        </tr>
-      
 </table>
 
 
@@ -105,7 +92,7 @@ require 'database.php';
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b><?php echo ucfirst($_SESSION['name']); ?></b></span>
-    <span style="margin-left: 195px;"><?php echo ($_SESSION['EP']); ?></span>
+    <span style="margin-left: 195px;"><?php echo ($_SESSION['ep']); ?></span>
     <br>
     <span style="margin-left: 10px;"><?php echo ucfirst($_SESSION['StudentID']); ?></span>
     <span style="margin-left: 180px;"><i class="fas fa-caret-up text-green-500"></i></span>
