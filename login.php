@@ -15,7 +15,7 @@
     <p class="text-center text-gray-500 mb-8">Welcome back mate!</p>
     <div class="flex justify-center">
         <button type="button" class="rounded-full bg-yellow-500 p-4">
-            <a href="Logintest.php">Login</a>
+            <a href="Index.php">Login</a>
         </button>
     </div>
 </div>

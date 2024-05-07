@@ -1,7 +1,10 @@
 <?php
 session_start();
 require 'database.php';
-
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: Index.php");
+    exit;
+}
 
 ?>
 
@@ -108,7 +111,7 @@ require 'database.php';
         <h3 class="text-2xl font-bold mb-4 text-white text-center">User Profile</h3>
 
         <div class="flex justify-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFiZpdaReqrOX5ZTox5ZwsWVttl0rVBCreNQ&s" style="width: 150px; height:150px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
+        <img src="img/Profile.jpeg" style="width: 150px; height:150px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
     </div>
     <br>
     <div class="flex justify-center">
@@ -155,33 +158,53 @@ require 'database.php';
 
         <!-- Modal -->
         <div id="myModal" class="modal" >
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+         
+            
             <!-- Modal content -->
-            <div class="modal-content"  style="border-radius: 10%; background-color: #fcd34d; width: 300px; text-align: center;">
-     
+            <div class="modal-content"  style="border: 2px solid black; border-radius: 10%; background-color: #fcd34d; width: 300px; text-align: center;">
                 <span class="close" onclick="hideModal()">&times;</span>
-                <h2 style="color: black; font-size: 1em;">Confirmation</h2>
-                <p style="color: black; font-size: 1em;">Are you sure you want to log out?</p>
-                <button onclick="logout()" style="color: black; font-size: 1em;">Yes</button>
-                <button onclick="hideModal()" style="color: black; font-size: 1em;">No</button>
+                <h2 style="color: black; font-size: 18px;">Confirmation</h2>
+                <p style="color: black; font-size: 18px;">Are you sure you want to log out?</p>
+                <button onclick="logout()" style="color: black; font-size: 18px;">Yes</button>
+                <button onclick="hideModal()" style="color: black; font-size: 18px;">No</button>
             </div>
         </div>
 
         <script>
-            function showModal() {
-                const modal = document.getElementById("myModal");
-                modal.style.display = "block";
-            }
+    function showModal() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    }
 
-            function hideModal() {
-                const modal = document.getElementById("myModal");
-                modal.style.display = "none";
-            }
+    function hideModal() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
 
-            function logout() {
-                // Perform logout logic here
-                // Redirect to logout page or clear session data
-            }
-        </script>
+    function logout() {
+        // Perform logout logic here
+        // Clear session data
+        <?php
+        // Unset all of the session variables
+        $_SESSION = array();
+
+        // Destroy the session.
+        session_destroy();
+        ?>
+
+        // Redirect to login page
+        window.location.href = "login.php";
+    }
+</script>
     </div>
         </div>
     </div>
