@@ -1,3 +1,9 @@
+<?php
+
+require 'database.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,13 +146,15 @@
         <h2 class="text-xl font-bold"><a href="aboutus.php">About us</a></h2>
     </div>
     </div>
-        </div>
+        
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-sign-out-alt text-xl mr-2"></i>
         <h2 class="text-xl font-bold">Log Out</h2>
     </div>
         </div>
+    </div>
+        
     
     <br><br><br>
     <nav class="bg-yellow-300 text-white px-4 py-2 flex justify-center" style="border-top-left-radius: 40%; border-top-right-radius: 40%; border: 1px solid black;position: fixed; bottom: -10px; left: -10px; right: -10px;">
