@@ -32,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New User</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body class="flex flex-col" style="background-color: #08415C;">
@@ -59,7 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <input type="text" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
         </div>
         <div class="mb-6">
-          <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+          <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:  <button id="showPassword" type="button"><i class="fas fa-eye"></i></button>
+         </label>
           <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Password">
         </div>
         <div class="flex items-center justify-between mb-4">
@@ -78,3 +80,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
+
+<script>
+    var passwordInput = document.getElementById('password');
+    var showPasswordButton = document.getElementById('showPassword');
+
+    showPasswordButton.addEventListener('mousedown', function() {
+      passwordInput.type = 'text';
+    });
+
+    showPasswordButton.addEventListener('mouseup', function() {
+      passwordInput.type = 'password';
+    });
+
+    // For touch devices
+    showPasswordButton.addEventListener('touchstart', function() {
+      passwordInput.type = 'text';
+    });
+
+    showPasswordButton.addEventListener('touchend', function() {
+      passwordInput.type = 'password';
+    });
+  </script>
