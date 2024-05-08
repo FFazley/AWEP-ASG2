@@ -31,18 +31,7 @@
 </div>
 
 <br><br><br>
-<div class="overflow-x-auto">
-<table class="table-auto mx-auto rounded-lg" style="background-color: #CCCCCC; border-radius: 15px;">
-    <thead>
-        <tr>
-            <th class="px-8 py-2">OSP</th>
-            <th class="px-8 py-2">ALL</th>
-            <th class="px-8 py-2">LUMUT</th>
-        </tr>
-    </thead>
-   
-</table>
-</div>
+
 <div style="position: fixed; bottom: 0; left: 0; right: 0; opacity: 0.8;" class="bg-yellow-300 rounded-lg shadow-md p-8" style="border: 2px solid;background-color: #CCCCCC;">
 <div style="display: flex; align-items: center;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">

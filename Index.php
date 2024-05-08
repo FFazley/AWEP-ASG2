@@ -45,10 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password']) && isset(
 <body class="flex flex-col" style="background-color: #08415C;">
   <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
-    <div class="mt-60">
+     <div class="flex justify-center ">
+       <div class="mt-40">
+        <img src="img/Profile.jpeg" style="width: 150px; height:150px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
+  
+   
+      <br>
       <h1 class="text-center text-2xl font-bold mb-4 text-blue-700">Holla</h1>
       <p class="text-center text-gray-500 mb-8">Welcome back mate!</p>
-    </div>
+      </div></div>
     <div class="container mx-auto p-8 w-80 bg-white rounded-2xl shadow-md">
 
       <form method="POST">

@@ -82,7 +82,7 @@ require 'database.php';
     <div class="flex-container">
     <div style="position: absolute; top: 15px; left: 10px;">
    
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFiZpdaReqrOX5ZTox5ZwsWVttl0rVBCreNQ&s" style="width: 100px; height: 100px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
+    <img src="img/Profile.jpeg" style="width: 100px; height: 100px; margin-left: 10px; border: 2px solid yellow; border-radius: 50%;">
     </div>
     <div style="color: white; font-size: 20px; position: absolute; top: 45px; left: 150px;">
             <h1 style="color: white; font-size: 30px">Hello <?php echo ucfirst($_SESSION['name']); ?>!</h1>
