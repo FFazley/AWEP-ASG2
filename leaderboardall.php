@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,13 +52,13 @@
 <br>
 <hr style="border-color: black;">
  <br>   
-<div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+ <div style="display: flex; align-items: center;">
+    <img src="img/Profile.jpeg" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
-    <span style="margin-left: 10px;"><b>Mathew</b></span>
-    <span style="margin-left: 185px;">184</span>
+    <span style="margin-left: 10px;"><b><?php echo ucfirst($_SESSION['name']); ?></b></span>
+    <span style="margin-left: 195px;"><?php echo ($_SESSION['ep']); ?></span>
     <br>
-    <span style="margin-left: 10px;">22FTE3455</span>
+    <span style="margin-left: 10px;"><?php echo ucfirst($_SESSION['StudentID']); ?></span>
     <span style="margin-left: 180px;"><i class="fas fa-caret-up text-green-500"></i></span>
 </div>
 </div>
