@@ -25,7 +25,9 @@ require 'database.php';
 <br>
 <br>
 <h3 class="text-2xl font-bold mb-4 text-white text-center">Leaderboard</h3>
-<div class="overflow-x-auto">
+<img src="https://www.icegif.com/wp-content/uploads/2023/07/icegif-132.gif" alt="Image" class="mx-auto" style="max-width: 200px; border: 2px solid black; border-radius: 10px;">
+
+<br><div class="overflow-x-auto">
 <table class="table-auto mx-auto rounded-lg" style="background-color: #CCCCCC; border-radius: 15px;">
     <thead>
         <tr>
