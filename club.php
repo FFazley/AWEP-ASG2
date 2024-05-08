@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'database.php';
 
 // Initialize the list of club items

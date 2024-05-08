@@ -1,10 +1,7 @@
 <?php
 session_start();
 require 'database.php';
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: Index.php");
-    exit;
-}
+
 
 ?>
 

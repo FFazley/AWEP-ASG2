@@ -1,5 +1,35 @@
 <?php
-require 'database.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $course = $_POST['course'];
+    $intake = $_POST['intake'];
+    
+    if (empty($name)) {
+      $errors[] = "Name is required";
+    }
+    if (empty($email)) {
+      $errors[] = "Email is required";
+    }
+    if (empty($phone)) {
+      $errors[] = "Phone Number is required";
+    } 
+    
+    if (empty($course)) {
+      $errors[] = "Course is required";
+    }
+   
+    if (empty($intake)) {
+      $errors[] = "Intake is required";
+    }
+    if (empty($errors)) {
+      $stmt = $pdo->prepare("INSERT INTO applications (name, email, phone, course, intake) VALUES (?, ?, ?, ?, ?)");
+      $stmt->execute([$name, $email, $phone, $course, $intake]);
+      header("Location: club.php");
+      exit;
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +136,7 @@ require 'database.php';
                 <h1 class="font-bold text-3xl ml-2 px-10">Application Form </h1>
             </div>
             <br>
-            <form method="POST" action="process_form.php" onsubmit="showModal(event)">
+            <form method="POST" action="club.php" onsubmit="showModal(event)">
                 <div class="mt-8">
                     <label for="name" class="text-2xl">Name</label><br>
                     <input type="text" name="name"  class="mt-2 px-1 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" style="width: 350px;">
