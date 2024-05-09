@@ -2,7 +2,45 @@
 session_start();
 require 'database.php';
 
+if (isset($_SESSION['Fullname'])) {
+    $fullname = $_SESSION['Fullname'];
+} else {
+    echo '';
+}
 
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+} else {
+    $email = '';
+}
+
+
+if (isset($_SESSION['ep'])) {
+    $ep = $_SESSION['ep'];
+} else {
+    $ep = '';
+}
+
+
+if (isset($_SESSION['StudentID'])) {
+    $studentID = $_SESSION['StudentID'];
+} else {
+    $studentID = '';
+}
+
+
+if (isset($_SESSION['course'])) {
+    $course = $_SESSION['course'];
+} else {
+    $course = '';
+}
+
+
+if (isset($_SESSION['phone'])) {
+    $phone = $_SESSION['phone'];
+} else {
+    $phone = '';
+}
 ?>
 
 <!DOCTYPE html>
@@ -112,35 +150,35 @@ require 'database.php';
     </div>
     <br>
     <div class="flex justify-center">
-        <h3 class="text-white text-lg"><?php echo ($_SESSION['Fullname']); ?></h3>
-    </div>
-    <div class="flex justify-center">
-        <h4 class="text-white text-sm"><?php echo ($_SESSION['email']); ?></h4>
-    </div>
-        <br>
-        <div class="mt-6">
-    <div class="bg-yellow-300 rounded border-2 border-black" style="border-radius: 10px; text-align: center; width: 350px;">
-        <h2 class="text-xl font-bold">Total Point : <?php echo ($_SESSION['ep']); ?></h2>
-    </div>
-        </div>
-        <div class="mt-6">
-    <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
-        <i class="fas fa-id-card-alt text-xl mr-2"></i>
-        <h2 class="text-xl font-bold"><?php echo ($_SESSION['StudentID']); ?></h2>
-    </div>
-        </div>
-        <div class="mt-6">
-    <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
-        <i class="fas fa-code text-xl mr-2"></i>
-        <h2 class="text-xl font-bold"><?php echo ($_SESSION['course']); ?></h2>
-    </div>
-        </div>
-        <div class="mt-6">
-    <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
-        <i class="fas fa-phone-alt text-xl mr-2"></i>
-        <h2 class="text-xl font-bold"><?php echo ($_SESSION['phone']); ?></h2>
-    </div>
-        </div>
+    <h3 class="text-white text-lg"><?php echo isset($_SESSION['Fullname']) ? $_SESSION['Fullname'] : ''; ?></h3>
+</div>
+<div class="flex justify-center">
+    <h4 class="text-white text-sm"><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></h4>
+</div>
+<br>
+<div class="mt-6">
+<div class="bg-yellow-300 rounded border-2 border-black" style="border-radius: 10px; text-align: center; width: 350px;">
+    <h2 class="text-xl font-bold">Total Point : <?php echo isset($_SESSION['ep']) ? $_SESSION['ep'] : ''; ?></h2>
+</div>
+</div>
+<div class="mt-6">
+<div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
+    <i class="fas fa-id-card-alt text-xl mr-2"></i>
+    <h2 class="text-xl font-bold"><?php echo isset($_SESSION['StudentID']) ? $_SESSION['StudentID'] : ''; ?></h2>
+</div>
+</div>
+<div class="mt-6">
+<div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
+    <i class="fas fa-code text-xl mr-2"></i>
+    <h2 class="text-xl font-bold"><?php echo isset($_SESSION['course']) ? $_SESSION['course'] : ''; ?></h2>
+</div>
+</div>
+<div class="mt-6">
+<div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
+    <i class="fas fa-phone-alt text-xl mr-2"></i>
+    <h2 class="text-xl font-bold"><?php echo isset($_SESSION['phone']) ? $_SESSION['phone'] : ''; ?></h2>
+</div>
+</div>
         <div class="mt-6">
     <div class="bg-yellow-300 rounded border-2 border-black flex items-center" style="border-radius: 10px; width: 350px;">
         <i class="fas fa-info-circle text-xl mr-2"></i>
@@ -190,13 +228,7 @@ require 'database.php';
     function logout() {
         // Perform logout logic here
         // Clear session data
-        <?php
-        // Unset all of the session variables
-        $_SESSION = array();
-
-        // Destroy the session.
-        session_destroy();
-        ?>
+      
 
         // Redirect to login page
         window.location.href = "login.php";
@@ -227,6 +259,16 @@ require 'database.php';
                 icon.classList.toggle('icon-bigger');
             });
         });
+    </script>
+     <script>
+    window.onload = function() {
+        var element = document.getElementById('yourElementId');
+        if (element) {
+            element.addEventListener('click', function() {
+                // Your code here
+            });
+        }
+    }
     </script>
     </div>
     
