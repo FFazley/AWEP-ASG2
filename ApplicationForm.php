@@ -134,7 +134,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="mt-8">
                     <label for="course" class="text-2xl">Course</label><br>
-                    <input type="text" name="course"  class="mt-2 px-1 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" style="width: 350px;">
+                    <select name="course" class="mt-2 px-1 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" style="width: 350px;">
+                    <option value=""></option>   
+                    <option value="business_accounting_finance">Business Accounting & Finance</option>
+                        <option value="human_capital_management">Human Capital Management</option>
+                        <option value="apprenticeship_hospitality_management_operations">Apprenticeship Hospitality Management & Operations</option>
+                        <option value="entrepreneurship_marketing_strategies">Entrepreneurship & Marketing Strategies</option>
+                        <option value="midwifery">Midwifery</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="paramedic">Paramedic</option>
+                        <option value="public_health">Public Health</option>
+                        <option value="cardiovascular_technology">Cardiovascular Technology</option>
+                        <option value="application_development">Application Development</option>
+                        <option value="cloud_and_networking">Cloud and Networking</option>
+                        <option value="digital_arts_media">Digital Arts & Media</option>
+                        <option value="web_technology">Web Technology</option>
+                        <option value="data_analytics">Data Analytics</option>
+                        <option value="mechanical_engineering">Mechanical Engineering</option>
+                        <option value="petroleum_engineering">Petroleum Engineering</option>
+                        <option value="civil_engineering">Civil Engineering</option>
+                        <option value="electrical_engineering">Electrical Engineering</option>
+                        <option value="electronic_communication_engineering">Electronic and Communication Engineering</option>
+                    </select>
                 </div>
                 <div class="mt-8">
                     <label for="intake" class="text-2xl">Intake</label><br>

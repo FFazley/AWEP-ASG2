@@ -102,7 +102,7 @@ require 'database.php';
         <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
         <br>
         <div style="position: absolute; top: 10px; left: 10px;">
-            <a href="home.php" class="text-white text-lg" ><i class="fas fa-arrow-left text-black"></i> </a>
+            <a href="club.php" class="text-white text-lg" ><i class="fas fa-arrow-left text-black"></i> </a>
             <br>
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white text-center">User Profile</h3>
