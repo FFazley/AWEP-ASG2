@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 require 'database.php';
+
 
 if (isset($_SESSION['Fullname'])) {
     $fullname = $_SESSION['Fullname'];
@@ -224,16 +226,24 @@ if (isset($_SESSION['phone'])) {
         const modal = document.getElementById("myModal");
         modal.style.display = "none";
     }
+   function logout() {
+    // Clear session data and redirect
+    fetch('UserProfile.php', { method: 'POST' })
+        .then(response => {
+            if (response.ok) {
+                window.location.href = "login.php";
+            } else {
+                alert('Logout failed. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Logout error:', error);
+            alert('An error occurred. Please try again.');
+        });
+}
 
-    function logout() {
-        // Perform logout logic here
-        // Clear session data
-      
-
-        // Redirect to login page
-        window.location.href = "login.php";
-    }
 </script>
+
     </div>
         </div>
     </div>
@@ -250,16 +260,20 @@ if (isset($_SESSION['phone'])) {
     </nav>
 
   
-    <script>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
         const leaderboardBtn = document.getElementById('leaderboardBtn');
-        leaderboardBtn.addEventListener('click', () => {
-            leaderboardBtn.classList.add('pop-out');
-            const icons = document.querySelectorAll('.nav-item i');
-            icons.forEach(icon => {
-                icon.classList.toggle('icon-bigger');
+        if (leaderboardBtn) {
+            leaderboardBtn.addEventListener('click', () => {
+                leaderboardBtn.classList.add('pop-out');
+                const icons = document.querySelectorAll('.nav-item i');
+                icons.forEach(icon => {
+                    icon.classList.toggle('icon-bigger');
+                });
             });
-        });
-    </script>
+        }
+    });
+</script>
      <script>
     window.onload = function() {
         var element = document.getElementById('yourElementId');
@@ -270,6 +284,7 @@ if (isset($_SESSION['phone'])) {
         }
     }
     </script>
+
     </div>
     
 
