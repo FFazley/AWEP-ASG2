@@ -36,7 +36,7 @@
 <br><br><br>
 <div style="position: fixed; bottom: 0; left: 0; right: 0; opacity: 0.8;" class="bg-yellow-300 rounded-lg shadow-md p-8" style="border: 2px solid;background-color: #CCCCCC;">
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVzAfk3mLHo_2SzotrR2sqnpIWYlRQn-253Q&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Jacob</b></span>
     <span style="margin-left: 205px; ">256</span>
@@ -49,7 +49,7 @@
 <hr style="border-color: black;">
  <br>   
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCs3M36mkjIos3Qh5FCI7qsnYG163h4Mc4g&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Mathew</b></span>
     <span style="margin-left: 185px;">184</span>
@@ -62,7 +62,7 @@
 <hr style="border-color: black;">
 <br>
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4uunBc-K_WMQOSi8poWKcjzMb5g0a6J-mJQ&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Ruben</b></span>
     <span style="margin-left: 200px;">167</span>
@@ -75,7 +75,7 @@
 <hr style="border-color: black;">
 <br>
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSa7domsWAgUWdU7yptVe4s2TivD3IlUhuoQ&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Quincy</b></span>
     <span style="margin-left: 195px;">123</span>
@@ -88,7 +88,7 @@
 <hr style="border-color: black;">
 <br>
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6fTIZ-89jAW1R9et-FlI8axE2dUH9_cHoow&usqp=CAU   " style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Steven</b></span>
     <span style="margin-left: 203px;">65</span>

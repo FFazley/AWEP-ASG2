@@ -40,7 +40,7 @@ session_start();
 
 <div style="position: fixed; bottom: 0; left: 0; right: 0; opacity: 0.8;" class="bg-yellow-300 rounded-lg shadow-md p-8" style="border: 2px solid;background-color: #CCCCCC;">
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVzAfk3mLHo_2SzotrR2sqnpIWYlRQn-253Q&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Jacob</b></span>
     <span style="margin-left: 205px; ">256</span>
@@ -66,7 +66,7 @@ session_start();
 <hr style="border-color: black;">
 <br>
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4uunBc-K_WMQOSi8poWKcjzMb5g0a6J-mJQ&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Ruben</b></span>
     <span style="margin-left: 200px;">167</span>
@@ -79,7 +79,7 @@ session_start();
 <hr style="border-color: black;">
 <br>
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPDs2KWdJ-yhZXGRthFiMnILUpAHSLM8rt_K8P_Ge4ENuBMKojgQuW6qui55FDBDHxFlU&usqp=CAU" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Clifford</b></span>
     <span style="margin-left: 190px;">145</span>
@@ -92,7 +92,7 @@ session_start();
 <hr style="border-color: black;">
 <br>
 <div style="display: flex; align-items: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeoUiKFhVE7KfZfgqqrN0bHja79hXJnUBvQ&s" style="border-radius: 50%; width: 50px; height: 50px;">
+    <img src="https://i.pinimg.com/236x/32/ae/dd/32aedd66e90c78a683322851b4da5d8b.jpg" style="border-radius: 50%; width: 50px; height: 50px;">
    <div>
     <span style="margin-left: 10px;"><b>Hasbullah</b></span>
     <span style="margin-left: 170px;">135</span>

@@ -1,35 +1,18 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+require 'database.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
-    $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $email = $_POST['email'];
     $course = $_POST['course'];
     $intake = $_POST['intake'];
-    
-    if (empty($name)) {
-      $errors[] = "Name is required";
-    }
-    if (empty($email)) {
-      $errors[] = "Email is required";
-    }
-    if (empty($phone)) {
-      $errors[] = "Phone Number is required";
-    } 
-    
-    if (empty($course)) {
-      $errors[] = "Course is required";
-    }
-   
-    if (empty($intake)) {
-      $errors[] = "Intake is required";
-    }
-    if (empty($errors)) {
-      $stmt = $pdo->prepare("INSERT INTO applications (name, email, phone, course, intake) VALUES (?, ?, ?, ?, ?)");
-      $stmt->execute([$name, $email, $phone, $course, $intake]);
-      header("Location: club.php");
-      exit;
-    }
-  }
+
+    $sql = "INSERT INTO applications (name, phone, email, course, intake) VALUES (?, ?, ?, ?, ?)";
+    $stmt= $pdo->prepare($sql);
+    $stmt->execute([$name, $phone, $email, $course, $intake]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1 class="font-bold text-3xl ml-2 px-10">Application Form </h1>
             </div>
             <br>
-            <form method="POST" action="club.php" onsubmit="showModal(event)">
+            <form method="POST" action="ApplicationForm.php" onsubmit="showModal(event)">
                 <div class="mt-8">
                     <label for="name" class="text-2xl">Name</label><br>
                     <input type="text" name="name"  class="mt-2 px-1 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" style="width: 350px;">
@@ -157,8 +140,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="intake" class="text-2xl">Intake</label><br>
                     <input type="text" name="intake"  class="mt-2 px-1 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" style="width: 350px;">
                 </div>
+                <form>
                 <div class="mt-8 flex justify-center">
-                    <input type="submit" value="Submit" class="text-white text-lg bg-blue-500 rounded-lg px-4 py-2">
+                    <button type="submit" class="text-white text-lg bg-blue-500 rounded-lg px-4 py-2">Submit</button>
+                    </<form (ngSubmit)="onSubmit()" #form="ngForm">
+                    
                 </div>
             </form>
         </div>
@@ -169,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div id="success-modal" class="modal">
     <div class="bg-yellow-300 flex flex-col justify-center items-center rounded-lg fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style="border-radius: 20px; width: 300px;">
-            <h1 class="text-center font-bold text-2xl mb-4">Thank you for joining!</h1>
+        <span class="close">&times;</span>    <h1 class="text-center font-bold text-2xl mb-4">Thank you for joining!</h1>
             <p class="text-center">Your Attendance has been successfully recorded</p>
             <button class="bg-gray-300 hover:bg-blue-400 text-black font-bold py-2 px-4 rounded-full mt-4" onclick="window.location.href='club.php'">Go to Home</button>
         </div>
@@ -180,17 +166,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <script>
-        function showModal(event) {
-            event.preventDefault();
-            var modal = document.getElementById("success-modal");
-            modal.style.display = "block";
-        }
+     function showModal(event) {
+    event.preventDefault();
+    var modal = document.getElementById("success-modal");
+    modal.style.display = "block";
 
-        var closeBtn = document.getElementsByClassName("close")[0];
-        closeBtn.onclick = function() {
-            var modal = document.getElementById("success-modal");
-            modal.style.display = "";
+    // Create a new FormData object from the form
+    var formData = new FormData(event.target);
+
+    // Use AJAX to submit the form data
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "ApplicationForm.php", true);
+    xhr.send(formData);
+
+    xhr.onload = function() {
+        if (xhr.status == 200) {
+            console.log("Form submitted successfully");
+        } else {
+            console.error("Error submitting form");
         }
+    }
+}
+
+var closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.onclick = function() {
+    var modal = document.getElementById("success-modal");
+    modal.style.display = "";
+}
     </script>
 
    
