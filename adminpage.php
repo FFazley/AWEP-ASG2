@@ -89,14 +89,14 @@ if(isset($_POST['del_email'])){
     </style>
 </head>
 <body class="flex flex-col" style="background-color: #08415C;">
-    <div style="display: flex; justify-content: flex-end; position: fixed; top: 10px; right: 10px;">
+    <div style="display: flex; justify-content: flex-end;  top: 10px; right: 10px;">
         <button id="logoutBtn" style="background-color: #fcd34d; border: 2px solid black;">Logout</button>
     </div>
 
 <!-- Create a modal -->
 <div id="logoutModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
-    <div style="background-color: #fcd34d; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border: 2px solid black; width: 30%; border-radius: 30%; text-align: center;">
-        <p style="font-size: 20px;">Are you sure you want to logout?</p>
+    <div style="background-color: #fcd34d; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border: 2px solid black; width: 40%; border-radius: 30%; text-align: center;">
+        <p style="font-size: 15px;">Are you sure you want to logout?</p>
         <button id="confirmLogout">Yes</button>
         <button id="cancelLogout">No</button>
     </div>
@@ -104,7 +104,7 @@ if(isset($_POST['del_email'])){
     <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 mx-auto">
     <img src="img/pb.jpeg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.10;">
     <br>
-
+    </div>
     <div class="flex-container">
     <div style="position: absolute; top: 15px; left: 10px;">
    
@@ -120,32 +120,25 @@ if(isset($_POST['del_email'])){
     <br>
     <br>
     <?php
-echo "<table border='1' style='border: 2px solid black; color: black; border-collapse: collapse; margin: 0 auto; width: 80%; background-color: grey;'>";
-
-echo "<tr style='padding: 10px; background-color: lightblue;'><th style='border: 1px solid black;'>Email</th><th style='border: 1px solid black;'>Name</th><th style='border: 1px solid black;'>Full Name</th><th style='border: 1px solid black;'>Student ID</th><th style='border: 1px solid black;'>Course</th><th style='border: 1px solid black;'>EP</th><th style='border: 1px solid black;'>Phone</th><th style='border: 1px solid black;'></th></tr>";
-
 while($user = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    echo "<tr style='padding: 10px;'>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" . $user['email'] . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" . $user['name'] . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" .  $user['fullname']  . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" .  $user['studentid']  . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" . $user['course'] . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" . $user['ep'] . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>" . $user['phone'] . "</td>";
-    echo "<td style='border: 1px solid black; padding: 10px;'>";
-  
-  
-echo "<form action='adminpage.php' method='POST'>";
+    echo "<table border='1' style='border: 2px solid black; color: black; border-collapse: collapse; margin: 0 auto; margin-right: 10%; width: 80%; background-color: grey;'>";
+    echo "<tr style='padding: 10px; background-color: lightblue;'><th style='border: 1px solid black;'>Email</th><td style='border: 1px solid black; padding: 10px;'>" . $user['email'] . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'>Name</th><td style='border: 1px solid black; padding: 10px;'>" . $user['name'] . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'>Full Name</th><td style='border: 1px solid black; padding: 10px;'>" .  $user['fullname']  . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'>Student ID</th><td style='border: 1px solid black; padding: 10px;'>" .  $user['studentid']  . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'>Course</th><td style='border: 1px solid black; padding: 10px;'>" . $user['course'] . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'>EP</th><td style='border: 1px solid black; padding: 10px;'>" . $user['ep'] . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'>Phone</th><td style='border: 1px solid black; padding: 10px;'>" . $user['phone'] . "</td></tr>";
+    echo "<tr style='padding: 10px;'><th style='border: 1px solid black;'></th><td style='border: 1px solid black; padding: 10px;'>";
 
+    echo "<form action='adminpage.php' method='POST'>";
     echo "<input type='hidden' name='del_email' value='".$user['email']."'>";
-      echo "<button type='submit'>Delete</button>";
-      echo "</form>"; 
-   
-    echo "</tr>";
-}
-echo "</table>";
+    echo "<button type='submit'>Delete</button>";
+    echo "</form>";
 
+    echo "</td></tr>";
+    echo "</table><br>";
+}
 ?>
     
     <script>
